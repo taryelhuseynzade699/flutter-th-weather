@@ -44,5 +44,5 @@ jobs:
         uses: actions/upload-artifact@main
         with:
           name: app-release.apk
-          path: build/app/outputs/flutter-apk/app-release.apk
+          path: th_weather/build/app/outputs/flutter-apk/app-release.apk
           retention-days: 7 # Faylın GitHub-da saxlanılma müddəti (günlərlə)

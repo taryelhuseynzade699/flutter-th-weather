@@ -27,12 +27,12 @@ jobs:
 
       # GitHub serverində tamamilə yeni layihə yaradılır
       - name: Create New Flutter Project
-        run: flutter create --platforms=android,ios flutter-th-weather
+        run: flutter create --platforms=android,ios th_weather
 
       # Yaradılmış layihənin qovluğuna keçid edib asılılıqlar yüklənir
       - name: Install Dependencies
         run: |
-          cd flutter-th-weather
+          cd th_weather
           flutter pub get
 
       - name: Build APK

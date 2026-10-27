@@ -35,8 +35,13 @@ jobs:
           cd flutter-th-weather
           flutter pub get
 
-      # Yeni yaradılan layihənin işlək olub-olmadığı yoxlanılır
-      - name: Build Test APK
-        run: |
-          cd flutter-th-weather
-          flutter build apk --release
+      - name: Build APK
+        run: flutter build apk --release
+
+      # Build olunan APK faylını GitHub Actions panelinə yükləyir
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: app-release.apk
+          path: build/app/outputs/flutter-apk/app-release.apk
+          retention-days: 7 # Faylın GitHub-da saxlanılma müddəti (günlərlə)

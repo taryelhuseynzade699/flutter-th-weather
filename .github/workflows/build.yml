@@ -37,6 +37,7 @@ jobs:
 
       - name: Build APK
         run: flutter build apk --release
+        working-directory: ./th_weather
 
       # Build olunan APK faylını GitHub Actions panelinə yükləyir
       - name: Upload APK Artifact

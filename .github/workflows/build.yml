@@ -32,8 +32,8 @@ jobs:
       # Yaradılmış layihənin qovluğuna keçid edib asılılıqlar yüklənir
       - name: Install Dependencies
         run: |
-          cd th_weather
           flutter pub get
+        working-directory: ./th_weather
 
       - name: Build APK
         run: flutter build apk --release
